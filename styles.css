@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@500&display=swap);
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 180px;
+    background-color: #121212;
+    padding: 24px;
+}
+
+.logo {
+    margin-bottom: 20px;
+    text-align: center;
+    /* Center the logo */
+}
+
+.logo img {
+    max-width: 100%;
+    /* Ensure the logo is not bigger than the sidebar */
+    height: auto;
+    /* Keep the aspect ratio of the logo */
+}
+
+.sidebar-item {
+    display: block;
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+    text-align: left;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #121212;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+svg{
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    stroke-width: 2px;
+    stroke: #FFF;
+}
+
+.button-text {
+    color: #FFF;
+    /* The color you specified */
+    font-family: 'Lato', sans-serif;
+    /* Make sure 'Lato' font is imported or available */
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sidebar-item:focus,
+.sidebar-item.active {
+    /* Active state background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Shadow for a "lifted" effect */
+    border-radius: 20px;
+    background: linear-gradient(180deg, #019AD6 0%, #9747FF 100%);
+}
+
+/* You can add :hover styles for mouse-over interaction as well */
+.sidebar-item:hover {
+    background-color: #5d4bcf;
+    /* Slightly darker on hover */
+}
+
+.sidebar-item[data-protected="true"]:not(.active) {
+    color: grey;
+    pointer-events: none;
+}
+
+.sidebar-item.active {
+    color: #4CAF50;
+    /* active link color */
+}
